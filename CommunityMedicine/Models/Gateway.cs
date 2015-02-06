@@ -18,6 +18,10 @@ namespace CommunityMedicine.Models
         public DbSet<SendMedicine> SendMedicine { set; get; }
         public DbSet<District> District { set; get; }
         public DbSet<Thana> Thana { set; get; }
-        public DbSet<DoctorEntry> DoctorEntrie { set; get; } 
+        public DbSet<DoctorEntry> DoctorEntrie { set; get; }
+        public DbSet<Dose> Dose { set; get; }
+        public DbSet<Treatment> Treatment { set; get; }
+
+        public System.Collections.IEnumerable DoctorEntry { get; set; }
     }
 }

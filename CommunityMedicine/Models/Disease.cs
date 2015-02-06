@@ -11,6 +11,7 @@ namespace CommunityMedicine.Models
         public string DiseaseName { set; get; }
         public string DiseaseDescription { set; get; }
         public string TreatmentProcedure { set; get; }
-        public string PreferDrug { set; get; }
+        public int MedicineId { set; get; }
+        public virtual Medicine AMedicine { set; get; }
     }
 }

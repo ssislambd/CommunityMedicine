@@ -3,7 +3,7 @@ namespace CommunityMedicine.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class First : DbMigration
+    public partial class first : DbMigration
     {
         public override void Up()
         {
@@ -39,6 +39,17 @@ namespace CommunityMedicine.Migrations
                 .PrimaryKey(t => t.ThanaId)
                 .ForeignKey("dbo.Districts", t => t.DistrictId, cascadeDelete: true)
                 .Index(t => t.DistrictId);
+            
+            CreateTable(
+                "dbo.DoctorEntries",
+                c => new
+                    {
+                        DoctorEntryId = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Degree = c.String(),
+                        Specialization = c.String(),
+                    })
+                .PrimaryKey(t => t.DoctorEntryId);
             
             CreateTable(
                 "dbo.Medicines",
@@ -88,6 +99,7 @@ namespace CommunityMedicine.Migrations
             DropTable("dbo.SendMedicines");
             DropTable("dbo.NewCenters");
             DropTable("dbo.Medicines");
+            DropTable("dbo.DoctorEntries");
             DropTable("dbo.Thanas");
             DropTable("dbo.Districts");
             DropTable("dbo.Diseases");

@@ -163,26 +163,29 @@
     <Compile Include="Controllers\HeadOfficeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThanasController.cs" />
+    <Compile Include="Controllers\TreatmentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201502021830057_First.cs" />
-    <Compile Include="Migrations\201502021830057_First.Designer.cs">
-      <DependentUpon>201502021830057_First.cs</DependentUpon>
+    <Compile Include="Migrations\201502060505530_first.cs" />
+    <Compile Include="Migrations\201502060505530_first.Designer.cs">
+      <DependentUpon>201502060505530_first.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201502030359039_DoctorEntry.cs" />
-    <Compile Include="Migrations\201502030359039_DoctorEntry.Designer.cs">
-      <DependentUpon>201502030359039_DoctorEntry.cs</DependentUpon>
+    <Compile Include="Migrations\201502060508431_second.cs" />
+    <Compile Include="Migrations\201502060508431_second.Designer.cs">
+      <DependentUpon>201502060508431_second.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Disease.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\DoctorEntry.cs" />
+    <Compile Include="Models\Dose.cs" />
     <Compile Include="Models\Gateway.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\NewCenter.cs" />
     <Compile Include="Models\SendMedicine.cs" />
     <Compile Include="Models\Thana.cs" />
+    <Compile Include="Models\Treatment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +253,11 @@
     <Content Include="Views\CenterOffice\DoctorView.cshtml" />
     <Content Include="Views\CenterOffice\Index.cshtml" />
     <Content Include="Views\HeadOffice\PDF.cshtml" />
+    <Content Include="Views\Treatment\Create.cshtml" />
+    <Content Include="Views\Treatment\Delete.cshtml" />
+    <Content Include="Views\Treatment\Details.cshtml" />
+    <Content Include="Views\Treatment\Edit.cshtml" />
+    <Content Include="Views\Treatment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -263,11 +271,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502021830057_First.resx">
-      <DependentUpon>201502021830057_First.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201502060505530_first.resx">
+      <DependentUpon>201502060505530_first.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201502030359039_DoctorEntry.resx">
-      <DependentUpon>201502030359039_DoctorEntry.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201502060508431_second.resx">
+      <DependentUpon>201502060508431_second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
